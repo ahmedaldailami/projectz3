@@ -1,0 +1,53 @@
+/*    start variables   */
+:root {
+  --main-color : #2196F3;
+  --main-color : #1787E0;
+}
+/*    end variables   */
+
+
+
+/*    start global rules     */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--main-color);
+  font-family: 'Times New Roman', Times, serif
+}
+ul {
+  list-style: none;
+}
+/*    end global rules     */
+
+/*     start containers       */
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100px;
+  width: 600px;
+  background-color: Red ;
+}
+
+@media (min-width: 768px) {
+ .container {
+   width: 750px;
+ }
+}
+@media (min-width: 992px) {
+ .container {
+   width: 970px;
+ }
+}
+@media (min-width: 1200px) {
+ .container {
+   width: 1170px;
+ }
+}
+/*     end containers       */
+
