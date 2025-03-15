@@ -2,6 +2,7 @@
 :root {
   --main-color : #2196F3;
   --main-color : #1787E0;
+  --main-trans : 0.3s ease;
 }
 /*    end variables   */
 
@@ -22,6 +23,11 @@ body {
 }
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
 }
 /*    end global rules     */
 
@@ -29,9 +35,6 @@ ul {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  height: 100px;
-  width: 600px;
-  background-color: Red ;
 }
 
 @media (min-width: 768px) {
@@ -50,4 +53,69 @@ ul {
  }
 }
 /*     end containers       */
+
+/*      start header       */
+header {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0 0 10px #ddd;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+header .logo img {
+  width: 50px;
+}
+header nav ul {
+  display: flex;
+}
+header nav ul > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  text-transform: capitalize;
+  padding: 0 1.1em;
+  height: 55px;
+  transition: var(--main-trans);
+  overflow: hidden;
+  position: relative;
+}
+header nav ul > li > a::before {
+  content: '';
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--main-color);
+  top: 0;
+  left: -100%;
+  transition: var(--main-trans);
+}
+header nav ul > li > a:hover {
+  color: var(--main-color);
+  background-color: #fafafa;
+}
+header nav ul > li > a:hover::before{
+  left: 0;
+}
+@media (max-width: 767px) {
+header .logo {
+   width: 100%;
+   text-align: center;
+ }
+ header nav {
+   margin: auto;
+ }
+header nav ul > li > a {
+  padding: 0.6em;
+  font-size: 14px;
+  height: 25px;
+}
+}
+
+/*      end header       */
 
