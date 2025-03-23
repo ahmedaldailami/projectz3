@@ -126,7 +126,8 @@ a {
     width: 100%;
   }
   
-}/*    end  componants     */
+}
+/*    end  componants     */
 /*    end global rules     */
 
 /*      start header       */
@@ -287,6 +288,7 @@ header .mega-links .links li a i{
   display: flex;
   align-items: center;
   padding-bottom: 55px;
+  
 }
 @media (max-width: 991px) {
   .landing .container {
@@ -313,14 +315,14 @@ header .mega-links .links li a i{
    text-align: center;
  }
 }
-.landing .text h2{
+.landing .text h2 {
   font-size: 40px;
   font-weight: bold;
   letter-spacing: -2;
   margin: 0;
   text-transform: capitalize;
 }
-.landing .text p{
+.landing .text p {
   font-size: 20px;
   line-height: 1.6;
   margin: 5px 0 0;
