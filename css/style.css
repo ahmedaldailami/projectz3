@@ -2,6 +2,7 @@
 :root {
   --main-color : #2196F3;
   --alt-color : #1787E0;
+  --section-bg: #EcEcEc;
   --main-padding: 100px;
   --main-trans : 0.3s ease;
 }
@@ -63,6 +64,7 @@ a {
   text-transform: uppercase;
   position: relative;
   transition: var(--main-trans);
+  z-index: 1;
 }
 .main-tittle::before {
   content: "";
@@ -75,6 +77,7 @@ a {
   top: 50%;
   transform: translateY(-50%);
   z-index: -1;
+
 }
 .main-tittle::after {
   content: "";
@@ -302,7 +305,7 @@ header .mega-links .links li a i{
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: #ECECEC;
+  background-color: var(--section-bg);
   top: 0;
   left: 0;
   z-index: -1;
@@ -417,8 +420,54 @@ header .mega-links .links li a i{
   animation: moving-arrow 0.6s linear infinite;
 }
 
-
 /*      end articles section       */
+
+/*      start gallary section       */
+.gallary {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  position: relative;
+  background-color: var(--section-bg);
+}
+.gallary .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.gallary .box {
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+}
+.gallary .box .image {
+  position: relative;
+  overflow: hidden;
+}
+.gallary .box .image::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 0px;
+  width: 0px;
+  background-color: rgb(255 255 255 / 20%);
+  opacity: 0;
+  z-index: 2;
+}
+.gallary .box .image:hover::before {
+  animation: flashing 0.7s;
+}
+.gallary .box .image img {
+  max-width: 100%;
+  width: 100%;
+  transition: var(--main-trans);
+}
+.gallary .box .image:hover img {
+  transform: rotate(5deg) scale(1.1)
+}
+
+/*      end gallary section       */
 
 /*      start animation     */
 @keyframes up-and-down {
@@ -441,6 +490,17 @@ header .mega-links .links li a i{
       transform: translateX(-10px);
     }
   }
+  
+@keyframes flashing {
+  0%, 40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    width: 200%;
+    height: 200%;
+  }
+}
   
 /*      end animation     */
 
