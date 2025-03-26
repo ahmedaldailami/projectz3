@@ -6,6 +6,11 @@
   --main-padding: 100px;
   --main-trans : 0.3s ease;
 }
+@media (max-width: 767px) {
+  :root {
+    --main-padding: 50px;
+  }
+}
 /*    end variables   */
 
 
@@ -65,6 +70,13 @@ a {
   position: relative;
   transition: var(--main-trans);
   z-index: 1;
+}
+@media (max-width: 767px) {
+  .main-tittle {
+    font-size: 20px;
+    margin: 0 auto 40px;
+
+  }
 }
 .main-tittle::before {
   content: "";
@@ -137,12 +149,15 @@ a {
 /*      start header       */
 header {
 /*  position: fixed;
-  z-index: 999;
   top: 0;
   width: 100%;  
   background-color: #fff;
-*/
+  position: sticky;
+  top: 0;
+  background-color: var(--section-bg);
+  */
   box-shadow: 0 0 10px #ddd;
+
 }
 header .container {
   position: relative;
@@ -468,6 +483,153 @@ header .mega-links .links li a i{
 }
 
 /*      end gallary section       */
+
+
+
+
+/*      start features section     */
+.features {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  position: relative;
+}
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.features .box {
+  text-align: center;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+.features .box .image-holder {
+  position: relative;
+}
+.features .box .image-holder::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.features .box .image-holder::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  border-width: 0px 0px 150px 350px;
+  border-style: solid;
+  border-color: transparent transparent white transparent;
+  transition: var(--main-trans);
+}
+.features .box:hover .image-holder::after {
+  border-width: 150px 350px 150px 0;
+}
+.features .box .image-holder img {
+  max-width: 100%;
+}
+.features .box h2 {
+  font-size: 40px;
+  font-weight: bold;
+  font-variant: small-caps;
+  text-transform: capitalize;
+  width: fit-content;
+  margin: auto;
+  position: relative;
+}
+.features .box h2::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 15px;
+  width: calc( 100% - 30px);
+  height: 2px;
+  background-color: Gold
+}
+.features .box p {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.6;
+  padding: 25px;
+  margin: 30px 0;
+}
+.features .box a {
+  display: block;
+  width: fit-content;
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 auto 30px;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  padding: 10px 30px;
+  transition: var(--main-trans);
+}
+@media (max-width: 767px) {
+ .features .box h2 {
+   font-size: 30px;
+   
+ }
+ .features .box p {
+   font-size: 14px;
+   margin: 20px 0;
+ }
+ .features .box a {
+   font-size: 15px;
+   margin: 0 auto 15px;
+ }
+ 
+}
+
+.features .quality .image-holder::before {
+  background-color: rgb(244 64 54 / 60%);
+}
+.features .quality h2::before {
+  background-color: #f44036;
+}
+.features .quality a {
+  color: #f44036;
+  border-color: #f44036;
+  background: linear-gradient(to right, #f44036 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .time .image-holder::before {
+  background-color: rgb(0 150 136 / 60%)
+}
+.features .time h2::before {
+  background-color: #009688;
+}
+.features .time a {
+  color: #009688;
+  border-color: #009688;
+  background: linear-gradient(to right, #009688 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .passion .image-holder::before {
+  background-color: rgb(3 169 244 / 60%)
+}
+.features .passion h2::before {
+  background-color: #03a9f4;
+}
+.features .passion a {
+  color: #03a9f4;
+  border-color: #03a9f4;
+  background: linear-gradient(to right, #03a9f4 50%, white 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+}
+.features .box:hover a {
+  background-position: left bottom;
+  color: #fff;
+}
+
+/*      end features section     */
+
+
+
 
 /*      start animation     */
 @keyframes up-and-down {
