@@ -675,10 +675,94 @@ header .mega-links .links li a i{
   font-size: 12px;
   color: #777;
 }
-
-
-
 /*      end testimoniales section     */
+
+/*      start team section     */
+.team {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  position: relative;
+}
+.team .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.team .box {
+  position: relative;
+}
+.team .box::before, 
+.team .box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 10px;
+}
+.team .box::before {
+  width: calc(100% - 60px);
+  background-color: #f3f3f3;
+  z-index: -2;
+}
+.team .box::after {
+  width: 0;
+  background-color: #e4e4e4;
+  z-index: -1;
+  transition: var(--main-trans);
+}
+.team .box:hover::after {
+  width: calc(100% - 60px);
+}
+.team .box .data {
+  display: flex;
+  margin-top: 60px;
+}
+.team .box .data img {
+  width: calc(100% - 60px);
+  border-radius: 10px;
+}
+.team .box .data img:hover {
+  filter: grayscale(100)
+}
+.team .box .data .social {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.team .box .data .social a {
+  font-size: 1em;
+  margin: 5px auto;
+}
+.team .box .data .social a i {
+  color: #777;
+  transition: var(--main-trans);
+}
+.team .box .data .social a:hover i {
+  color: var(--main-color);
+}
+.team .box .data{}
+.team .box .info {
+  padding-left: 80px;
+}
+.team .box .info h3 {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--main-color);
+  margin-bottom: 0;
+  transition: var(--main-trans);
+}
+.team .box:hover .info h3 {
+  color: #777;
+}
+.team .box .info p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+/*      end team section     */
 
 
 
