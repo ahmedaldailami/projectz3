@@ -722,7 +722,7 @@ header .mega-links .links li a i{
   width: calc(100% - 60px);
   border-radius: 10px;
 }
-.team .box .data img:hover {
+.team .box:hover .data img {
   filter: grayscale(100)
 }
 .team .box .data .social {
