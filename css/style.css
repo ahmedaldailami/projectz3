@@ -862,18 +862,17 @@ header .mega-links .links li a i{
 }
 @media (max-width: 991px) {
 .our-skills img {
-/*  display: none;  */
+  display: none;
 }
 }
-
 .our-skills .skills {
   flex: 1;
 }
-.our-skills .skills .skill {}
 .our-skills .skills .skill h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  text-transform: capitalize;
 }
 .our-skills .skills .skill h3 span {
   font-size: 12px;
@@ -890,10 +889,8 @@ header .mega-links .links li a i{
 .our-skills .skills .skill .progress span {
   height: 100%;
   background-color: var(--main-color);
-
   position: absolute;
 }
-
 /*      end our skills section     */
 
 
