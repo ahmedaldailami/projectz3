@@ -546,7 +546,6 @@ header .mega-links .links li a i{
   left: 15px;
   width: calc( 100% - 30px);
   height: 2px;
-  background-color: Gold
 }
 .features .box p {
   font-size: 20px;
@@ -762,6 +761,94 @@ header .mega-links .links li a i{
   font-size: 14px;
 }
 /*      end team section     */
+
+/*      start services section     */
+.services {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  position: relative;
+  background-color: var(--section-bg);
+}
+.services .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px;
+}
+.services .box {
+  text-align: center;
+  background-color: #fff;
+  box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+  border-radius: 10px;
+  counter-increment: services;
+  position: relative;
+  transition: var(--main-trans);
+}
+.services .box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 0;
+  background-color: var(--main-color);
+  transition: var(--main-trans);
+}
+.services .box:hover {
+  transform: translateY(-10px);
+}
+.services .box:hover::before {
+  width: 97%;
+}
+.services .box i {
+  color: var(--section-bg);
+  margin: 30px auto 15px;
+}
+.services .box h3 {
+  color: var(--main-color);
+  text-transform: capitalize;
+}
+.services .box .info {
+  background-color: #f9f9f9;
+  padding: 15px;
+  text-align: right;
+  position: relative;
+  border-bottom-left-radius: 10px;
+}
+.services .box .info::before {
+  content: "0" counter(services);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 80px;
+  background-color: var(--main-color);
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 10px;
+  padding-right: 15px;
+}
+.services .box .info::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 80px;
+  width: 50px;
+  height: calc(100% + 0.4px);
+  background-color: #d5d5d5;
+  transform: skewX(-30deg);
+}
+.services .box .info a {
+  color: var(--main-color);
+}
+/*      end services section     */
+
+/*      end services section     */
+/*      end services section     */
 
 
 
