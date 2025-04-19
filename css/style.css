@@ -25,7 +25,6 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'Times New Roman', Times, serif
 }
 ul {
   list-style: none;
@@ -1097,8 +1096,124 @@ header .mega-links .links li a i{
 .events .subscribe form input[type="submit"]:hover {
   background-color: var(--alt-color);
 }
-
 /*      end events section     */
+
+/*      start pricing section     */
+.pricing {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background-color: var(--section-bg);
+  position: relative;
+}
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 40px;
+}
+.pricing .box {
+  box-shadow: 0 0 10px #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  position: relative;
+  z-index: 1;
+}
+.pricing .box::before,
+.pricing .box::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 50%;
+  background-color: #f6f6f6;
+  z-index: -1;
+  transition: var(--main-trans);
+}
+.pricing .box::before {
+  left: 0;
+  bottom: 0;
+}
+.pricing .box::after {
+  right: 0;
+  top: 0;
+}
+.pricing .box:hover::before, 
+.pricing .box:hover::after {
+  width: 100%;
+}
+.pricing .box.popular .label{
+  position: absolute;
+  right: 20px;
+  writing-mode: vertical-lr;
+  padding: 10px 10px 35px 10px;
+  background-color: var(--main-color);
+  font-weight: bold;
+  color: #fff;
+}
+.pricing .box.popular .label::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  border-style: solid;
+  border-width: 20px;
+  border-color: transparent transparent #fff transparent;
+  transition: var(--main-trans);
+}
+.pricing .box.popular:hover .label::before {
+  border-color: transparent transparent #f6f6f6 transparent;
+}
+
+.pricing .box .tittle {
+  font-size: 25px;
+  font-weight: bold;
+  letter-spacing: -1px;
+  margin-top: 20px;
+}
+.pricing .box i {
+  color: var(--main-color);
+  margin: 20px;
+}
+.pricing .box .price span:first-child {
+  display: block;
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--main-color);
+}
+.pricing .box .price span:last-child {
+  display: block;
+  color: #777;
+}
+.pricing .box ul {
+  margin: 20px 0;
+  text-align: left;
+}
+.pricing .box ul li {
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+.pricing .box ul li::before {
+  font-family: "Font Awesome Free 6.2.1";
+  content: "\dafc";
+  margin-right: 5px;
+  color: var(--main-color);
+}
+.pricing .box a {
+  font-size: 16px;
+  font-weight: bold;
+  color: var(--main-color);
+  text-transform: capitalize;
+  display: block;
+  width: fit-content;
+  margin: 15px auto 30px;
+  padding: 10px 20px;
+  border: 1px solid var(--main-color);
+  border-radius: 5px;
+}
+
+
+
+/*      end pricing section     */
 
 /*      start animation     */
 @keyframes up-and-down {
