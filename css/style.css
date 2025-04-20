@@ -1210,10 +1210,70 @@ header .mega-links .links li a i{
   border: 1px solid var(--main-color);
   border-radius: 5px;
 }
-
-
-
 /*      end pricing section     */
+
+/*      start videoes section     */
+.videoes{
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+}
+.videoes .holder {
+  background-color: var(--section-bg);
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  text-transform: capitalize;
+}
+@media (max-width: 991px) {
+  .videoes .holder {
+    flex-direction: column;
+  }
+}
+.videoes .holder .list {
+  min-width: 320px;
+  background-color: #fff;
+}
+.videoes .holder .list .name {
+  color: var(--main-color);
+  background-color: #f4f4f4;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.videoes .holder .list ul li {
+  padding: 20px;
+  cursor: pointer;
+  border-top: 1px solid var(--section-bg);
+  transition: var(--main-trans);
+}
+.videoes .holder .list ul li:hover {
+    background-color: #fafafa;
+    color: var(--main-color);
+}
+
+.videoes .holder .list ul span {
+  display: block;
+  margin-top: 10px;
+}
+.videoes .holder .preview {
+  background-color: #e2e2e2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.videoes .holder .preview img {
+  max-width: 100%;
+}
+.videoes .holder .preview .info {
+  background-color: #fff;
+  padding: 20px;
+  margin-top: 10px
+}
+
+/*      end videoes section     */
+
 
 /*      start animation     */
 @keyframes up-and-down {
