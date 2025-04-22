@@ -1271,8 +1271,74 @@ header .mega-links .links li a i{
   padding: 20px;
   margin-top: 10px
 }
-
 /*      end videoes section     */
+
+/*      start stats section     */
+.stats {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  background: url("../images/stats.jpg") no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.stats::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  opacity: 0.8;
+}
+.stats .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+.stats .box {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0.8;
+  transition: var(--main-trans);
+}
+.stats .box::before, 
+.stats .box::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0;
+  background-color: var(--main-color);
+  transition: var(--main-trans);
+}
+.stats .box::before {
+  left: 0;
+  top: 0;
+}
+.stats .box::after {
+  right: 0;
+  bottom: 0;
+}
+.stats .box:hover::before,
+.stats .box:hover::after {
+  height: 100%;
+}
+.stats .box:hover {
+  opacity: 1;
+}
+.stats .box span.number {
+  display: block;
+  margin: 10px auto;
+  font-size: 50px;
+  font-weight: bold;
+}
+.stats .box span.text {
+  color: var(--main-color);
+}
+/*      end stats section     */
 
 
 /*      start animation     */
