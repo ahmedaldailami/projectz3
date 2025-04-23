@@ -178,7 +178,7 @@ header nav .min-links > li > a:hover {
   color: var(--main-color);
   background-color: #fafafa;
 }
-header nav .min-links > li > a:hover::before{
+header nav .min-links > li > a:hover::before {
   left: 0;
 }
 @media (max-width: 767px) {
@@ -221,7 +221,7 @@ header .mega-links {
    padding: 5px;
  }
 }
-header .mega-links .image img{
+header .mega-links .image img {
   max-width: 100%;
 }
 @media (max-width: 991px) {
@@ -233,7 +233,7 @@ header .mega-links .links {
   min-width: 250px;
   flex: 1;
 }
-header .mega-links .links li{
+header .mega-links .links li {
   position: relative;
 }
 header .mega-links .links li:not(:last-child) {
@@ -244,7 +244,7 @@ header .mega-links .links li:not(:last-child) {
     border-bottom: 1px solid #E9E6E6;
  }
 }
-header .mega-links .links li::before{
+header .mega-links .links li::before {
   content: "";
   position: absolute;
   top: 0;
@@ -255,10 +255,10 @@ header .mega-links .links li::before{
   z-index: -1;
   transition: var(--main-trans);
 }
-header .mega-links .links li:hover::before{
+header .mega-links .links li:hover::before {
   width: 100%;
 }
-header .mega-links .links li a{
+header .mega-links .links li a {
   color: var(--main-color);
   display: block;
   padding: 15px;
@@ -267,11 +267,11 @@ header .mega-links .links li a{
   text-transform: capitalize;
 }
 @media (max-width: 767px) {
-  header .mega-links .links li a{
+  header .mega-links .links li a {
   font-size: 12px;
  }
 }
-header .mega-links .links li a i{
+header .mega-links .links li a i {
   margin-right: 10px;
 }
 /*      end header       */
@@ -1102,7 +1102,7 @@ header .mega-links .links li a i{
 .pricing .box:hover::after {
   width: 100%;
 }
-.pricing .box.popular .label{
+.pricing .box.popular .label {
   position: absolute;
   right: 20px;
   writing-mode: vertical-lr;
@@ -1173,7 +1173,7 @@ header .mega-links .links li a i{
 /*      end pricing section     */
 
 /*      start videoes section     */
-.videoes{
+.videoes {
   padding-top: var(--main-padding);
   padding-bottom: var(--main-padding);
 }
@@ -1361,7 +1361,7 @@ header .mega-links .links li a i{
 .discount .form .input:focus {
   outline: none;
 }
-.discount .form input[type="submit"]{
+.discount .form input[type="submit"] {
   display: block;
   width: 100%;
   padding: 15px;
